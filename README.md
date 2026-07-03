@@ -61,23 +61,14 @@ This cheat sheet provides a quick reference to commonly used Git commands.
 Git Worktrees allow you to work on multiple branches simultaneously without creating multiple clones.
 
 | Command | Description |
-
 |---------|-------------|
-
 | `git worktree list` | List all worktrees. |
-
 | `git worktree add ../feature feature-branch` | Create a worktree for an existing branch. |
-
 | `git worktree add -b feature ../feature` | Create a new branch and worktree. |
-
 | `git worktree remove ../feature` | Remove a worktree. |
-
 | `git worktree prune` | Remove stale worktree metadata. |
-
 | `git worktree lock` | Prevent a worktree from being pruned. |
-
 | `git worktree unlock` | Unlock a worktree. |
-
 | `git worktree repair` | Repair broken worktree metadata. |
 
 ### Example
