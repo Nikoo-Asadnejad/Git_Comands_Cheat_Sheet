@@ -55,6 +55,55 @@ This cheat sheet provides a quick reference to commonly used Git commands.
 | `git stash clear`                   | Clear all stashed changes.                         |
 | `git stash pop`                     | Apply the most recent stash and remove it from the stash list. |
 
+
+# Git Worktrees
+
+Git Worktrees allow you to work on multiple branches simultaneously without creating multiple clones.
+
+| Command | Description |
+
+|---------|-------------|
+
+| `git worktree list` | List all worktrees. |
+
+| `git worktree add ../feature feature-branch` | Create a worktree for an existing branch. |
+
+| `git worktree add -b feature ../feature` | Create a new branch and worktree. |
+
+| `git worktree remove ../feature` | Remove a worktree. |
+
+| `git worktree prune` | Remove stale worktree metadata. |
+
+| `git worktree lock` | Prevent a worktree from being pruned. |
+
+| `git worktree unlock` | Unlock a worktree. |
+
+| `git worktree repair` | Repair broken worktree metadata. |
+
+### Example
+
+```bash
+
+git checkout main
+
+git worktree add ../feature-login feature/login
+
+cd ../feature-login
+
+# main and feature/login are now open simultaneously
+
+```
+
+### Benefits
+
+- Work on multiple branches simultaneously.
+
+- No need to stash changes when switching tasks.
+
+- Faster than cloning repositories.
+
+- Great for code reviews and hotfixes.
+
 ## Viewing Changes
 
 | Command                               | Description                                         |
